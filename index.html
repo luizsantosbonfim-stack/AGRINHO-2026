@@ -16,15 +16,15 @@
         <button id="decrease-font" class="btn-acc">A-</button>
     </div>
 
-    <header class="main-header">
+    <header class="main-header" id="main-banner">
         <div class="header-overlay">
-            <h1>Cultivando o Amanhã</h1>
-            <p class="subtitle">Água, Terra e Vida em Equilíbrio</p>
+            <h1 id="main-title">Cultivando o Amanhã</h1>
+            <p id="main-subtitle" class="subtitle">Água, Terra e Vida em Equilíbrio</p>
         </div>
     </header>
 
     <main class="content-container">
-        <section class="info-section">
+        <section class="info-section" id="info-section-area">
             <h2 class="section-title">Explore os Pilares da Terra</h2>
             <p class="section-desc">Filtre os conteúdos abaixo para focar no pilar ambiental que deseja estudar hoje.</p>
             
@@ -68,14 +68,14 @@
             </div>
         </section>
 
-        <hr class="divider">
+        <hr class="divider" id="section-divider">
 
         <section class="quiz-section">
-            <h2 class="section-title">Missão Ecológica Dinâmica 🎮</h2>
-            <p class="section-desc" style="color: #457b9d; font-weight: bold;">Regras: Acertou = +100pts | Errou = -50pts</p>
+            <h2 class="section-title" id="quiz-title">Missão Ecológica Dinâmica 🎮</h2>
+            <p class="section-desc" id="quiz-desc" style="color: #457b9d; font-weight: bold;">Regras: Acertou = +100pts | Errou = -50pts</p>
             
             <div class="xp-bar-container">
-                <div class="xp-text">Sua Pontuação Atual: <span id="score-counter">0</span> Pontos</div>
+                <div class="xp-text" id="score-text-label">Sua Pontuação Atual: <span id="score-counter">0</span> Pontos</div>
                 <div class="xp-bar-bg">
                     <div id="xp-bar-fill" class="xp-bar-fill"></div>
                 </div>
@@ -94,13 +94,14 @@
 
             <div id="result-container" class="quiz-box hidden text-center">
                 <div id="medal-icon" class="medal-animation">🌱</div>
-                <h3>Painel de Conquistas</h3>
+                <h3 id="result-title-text">Painel de Conquistas</h3>
                 <p id="result-text"></p>
                 
-                <div class="leaderboard-box">
+                <button id="hard-mode-btn" class="btn-hard hidden">💀 NÍVEL HARD REVELADO 💀</button>
+                
+                <div class="leaderboard-box" id="leaderboard-box-area">
                     <h4>🏆 Classificação Geral (Ordenada por Pontos)</h4>
-                    <ul id="leaderboard-list">
-                        </ul>
+                    <ul id="leaderboard-list"></ul>
                 </div>
 
                 <button id="restart-btn" class="btn-restart">Reiniciar Jornada ↺</button>
