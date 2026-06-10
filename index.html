@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultivando o Amanhã: Ecossistemas em Equilíbrio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="particle-container" aria-hidden="true"></div>
+
+    <div class="accessibility-bar" role="complementary" aria-label="Acessibilidade">
+        <button id="toggle-contrast" class="btn-acc">🌓 Alto Contraste</button>
+        <button id="increase-font" class="btn-acc">A+</button>
+        <button id="decrease-font" class="btn-acc">A-</button>
+    </div>
+
+    <header class="main-header">
+        <div class="header-overlay">
+            <h1>Cultivando o Amanhã</h1>
+            <p class="subtitle">Água, Terra e Vida em Equilíbrio</p>
+        </div>
+    </header>
+
+    <main class="content-container">
+        <section class="info-section">
+            <h2 class="section-title">Explore os Pilares da Terra</h2>
+            <p class="section-desc">Filtre os conteúdos abaixo para focar no pilar ambiental que deseja estudar hoje.</p>
+            
+            <div class="filter-container">
+                <button class="btn-filter active" data-filter="all">🌍 Todos</button>
+                <button class="btn-filter" data-filter="agua">💧 Água</button>
+                <button class="btn-filter" data-filter="terra">🌱 Terra</button>
+                <button class="btn-filter" data-filter="vida">🐝 Vida</button>
+            </div>
+            
+            <div class="cards-grid" id="cards-directory">
+                <div class="card" data-category="agua" tabindex="0">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=600&q=80" alt="Riacho fluindo pela floresta">
+                    </div>
+                    <div class="card-content">
+                        <h3>💧 Água Preservada</h3>
+                        <p>Menos de 1% da água do planeta é doce e acessível. Cuidar desse recurso regula o clima e mantém a vida.</p>
+                    </div>
+                </div>
+                
+                <div class="card" data-category="terra" tabindex="0">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80" alt="Brotinho crescendo na terra fértil">
+                    </div>
+                    <div class="card-content">
+                        <h3>🌱 Terra Nutrida</h3>
+                        <p>O solo vivo funciona capturando toneladas de carbono da atmosfera. Proteger o chão é proteger o ar.</p>
+                    </div>
+                </div>
+                
+                <div class="card" data-category="vida" tabindex="0">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=600&q=80" alt="Abelha polinizando detalhadamente uma flor amarela">
+                    </div>
+                    <div class="card-content">
+                        <h3>🐝 Vida em Equilíbrio</h3>
+                        <p>A biodiversidade sustenta os ecossistemas. Abelhas e outros polinizadores são vitais para a produção de alimentos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <section class="quiz-section">
+            <h2 class="section-title">Missão Ecológica Dinâmica 🎮</h2>
+            <p class="section-desc" style="color: #457b9d; font-weight: bold;">Regras: Acertou = +100pts | Errou = -50pts</p>
+            
+            <div class="xp-bar-container">
+                <div class="xp-text">Sua Pontuação Atual: <span id="score-counter">0</span> Pontos</div>
+                <div class="xp-bar-bg">
+                    <div id="xp-bar-fill" class="xp-bar-fill"></div>
+                </div>
+            </div>
+
+            <div id="quiz-container" class="quiz-box">
+                <div id="question-text" class="question">Carregando desafio...</div>
+                <div id="options-container" class="options-grid"></div>
+                <div id="feedback" class="feedback-box hidden"></div>
+                
+                <div class="quiz-footer">
+                    <span id="progress">Questão 1 de 6</span>
+                    <button id="next-btn" class="btn-next hidden">Avançar Missão ➔</button>
+                </div>
+            </div>
+
+            <div id="result-container" class="quiz-box hidden text-center">
+                <div id="medal-icon" class="medal-animation">🌱</div>
+                <h3>Painel de Conquistas</h3>
+                <p id="result-text"></p>
+                
+                <div class="leaderboard-box">
+                    <h4>🏆 Classificação Geral (Ordenada por Pontos)</h4>
+                    <ul id="leaderboard-list">
+                        </ul>
+                </div>
+
+                <button id="restart-btn" class="btn-restart">Reiniciar Jornada ↺</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Cultivando o Amanhã. Um ecossistema digital interativo.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
